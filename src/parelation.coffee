@@ -57,7 +57,7 @@ class OrderScope extends Scope
     criterias = []
     for key, i in Object.keys(@options)
       direction = @options[key]
-      criterias << "#{key}:@{direction}"
+      criterias.push("#{key}:#{direction}")
 
     @scope.fetch $.extend(data, "order[]": criterias)
 
