@@ -5,7 +5,7 @@ ActiveRecord–like API to access backends built with [parelation gem](https://g
 
 ## Requirements
 
-The only dependency for this library is jQuery. Your backend should obviously be built with parelation gem.
+The only dependency for this library is jQuery. Your backend should be obviously built with parelation gem.
 
 ## Usage
 
