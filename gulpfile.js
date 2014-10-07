@@ -10,6 +10,18 @@ gulp.task('compress', function() {
     .pipe(uglify())
     .pipe(rename({suffix: '.min', extname: '.js'}))
     .pipe(gulp.dest('dist'))
+
+  gulp.src('src/*.coffee')
+    .pipe(coffee())
+    .pipe(rename({extname: '.js'}))
+    .pipe(gulp.dest('dist'))
+});
+
+gulp.task('compile', function() {
+  gulp.src('src/*.coffee')
+    .pipe(coffee())
+    .pipe(rename({extname: '.js'}))
+    .pipe(gulp.dest('dist'))
 });
 
 gulp.task('watch', function() {
