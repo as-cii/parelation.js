@@ -54,10 +54,8 @@ class OrderScope extends Scope
   constructor: (@scope, @options) ->
 
   fetch: (data) ->
-    criterias = []
-    for key, i in Object.keys(@options)
-      direction = @options[key]
-      criterias.push("#{key}:#{direction}")
+    criterias = $.map Object.keys(@options), (key) =>
+      "#{key}:#{@options[key]}"
 
     @scope.fetch $.extend(data, "order[]": criterias)
 
